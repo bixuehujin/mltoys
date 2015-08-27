@@ -14,18 +14,21 @@ fn matrix_new2() {
 	assert!(2 == rows);
 	assert!(2 == columns);
 
-	m.print();
-
 	let (rows, columns) = m.shape();
 	assert!(2 == rows);
 	assert!(2 == columns);
 
 	assert!(4 == m.size());
+
+	println!("{:?}", m);
+
+	let f = Matrix::new(1, 2, vec![8.0, 90.0]);
+	println!("{:?}", f);
 }
 
 #[test]
 fn matrix_add() {
 	let m = Matrix::new(2, 2, vec![1.0, 2.0, 3.0, 4.0]);
 	let b = m + 3.0;
-	b.print()
+	println!("{:?}", b);
 }
